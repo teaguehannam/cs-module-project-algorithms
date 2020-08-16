@@ -4,11 +4,11 @@ Returns: a List of integers
 '''
 def moving_zeroes(arr):
 	
-	for num in range(len(arr)-1):
-		for index in range(len(arr)-1):
-			if arr[index] == 0:
-				arr[index+1], arr[index] = arr[index], arr[index+1]
-				
+	for x in arr:
+		if x == 0:
+			arr.remove(x)
+			arr.append(0)
+
 	return arr
 
 if __name__ == '__main__':
