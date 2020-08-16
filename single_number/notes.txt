@@ -1,0 +1,26 @@
+    
+
+~ Dictionary Method ~
+
+    counter = {value: 0 for value in arr}
+
+    for value in arr:
+        counter[value] += 1
+
+    for value, count in counter.items():
+        if count == 1:
+            return value
+
+    raise ValueError(f'No values in {arr} occurred only once')
+
+
+
+~ Sort n Check ~
+
+    arr.sort()
+    idx = 0
+
+    while  idx+1 < len(arr) and arr[idx] == arr[idx+1]:
+        idx += 2
+
+    return arr[idx]
